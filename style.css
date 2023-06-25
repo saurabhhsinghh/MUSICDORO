@@ -1,0 +1,269 @@
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#background {
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url(https://img.freepik.com/free-photo/portrait-young-cheerful-girl-listening-music-headphones-isolated-gradient-pink-background-blue-neon-light_155003-45720.jpg?w=1060&t=st=1687692668~exp=1687693268~hmac=dbf32c077545944aa1f2e51fc9ba03fa71f3825d3fb1ea33672a76d5fc0ca376);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 2s ease-in;
+}
+
+
+#musicdoro {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px 50px 50px 50px;
+  border-radius: 500px;
+  background: rgba(63, 43, 174, 0.747);
+  box-shadow: 0 10px 50px rgb(239, 9, 9);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(223, 213, 14, 0.977);
+}
+
+
+#screenplay {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 31px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 3s ease-out;
+}
+body.page-loaded #screenplay {
+  opacity: 0;
+  visibility: hidden;
+}
+#screenplay img {
+  width: 149px;
+  height: 149px;
+}
+
+
+.button {
+  border-radius: 99px;
+  position: relative;
+  right: 0;
+  width: 49px;
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  color: #ecd507;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+
+#move {
+  top: 25px;
+  right: 25px;
+  height: 55px;
+}
+
+
+
+#timer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 69px;
+}
+.ctimer {
+  width: 280px;
+  height: 280px;
+}
+.cbg {
+  stroke: #ffffff;
+  stroke-width: 10;
+  fill: none;
+}
+.cpg {
+  stroke: #52fd66;
+  stroke-width: 10;
+  stroke-dasharray: 270;
+  stroke-linecap: round;
+  fill: none;
+  transform-origin: 40% 40%;
+  transform: rotate(-90deg);
+}
+body.rest-mode .cpg {
+  stroke: #a44e4e85;
+}
+body.timer-running .cpg {
+  transition: all 1s linear;
+}
+
+#tt {
+  fill: #0bec4f;
+}
+#tp,
+#tr {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  fill: #060606d1;
+}
+
+
+body.timer-paused:not(.rest-mode) #tp,
+body.rest-mode #tr,
+body.rest-mode.timer-paused #tp {
+  opacity: 1;
+}
+body.rest-mode.timer-paused #tr {
+  opacity: 0;
+}
+
+
+#sess {
+  border-radius: 40px;
+  background: #fff;
+  display: flex;
+  color: #5c5c5cb8;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+body.settings-active #sess {
+  opacity: 0;
+  visibility: hidden;
+}
+#sess p {
+  padding: 12px;
+}
+p#comp {
+  width: 80%;
+  text-align: center;
+}
+p#compsess {
+  font-weight: bold;
+  color: #222;
+  font-size: 20px;
+}
+
+/** 
+	* Timer functions
+	*/
+#tfun {
+  position: relative;
+  height: 145px;
+}
+
+/** 
+		* Buttons
+		*/
+#timbut {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+#timbut button {
+  background-color: #fd5252;
+  position: absolute;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+  font-size: 22px;
+  color: #fff;
+}
+body.settings-active #timbut {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+body.timer-running #str {
+  opacity: 0;
+  visibility: hidden;
+}
+body.timer-paused #str {
+  opacity: 1;
+  visibility: visible;
+}
+
+#tset {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+body.settings-active #tset {
+  opacity: 1;
+  visibility: visible;
+}
+#cset {
+  top: -45px;
+  height: 80px;
+  background: #d85e3a;
+  color: #f7ddd7;
+}
+#cset:hover {
+  color: #fff;
+}
+
+#tform {
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: #d85e3a;
+  z-index: 1;
+}
+.tline {
+  display: flex;
+}
+.tline:last-child {
+  margin-top: 20px;
+}
+.tline * {
+  font-size: 18px;
+}
+.tline label {
+  width: 50%;
+  color: #ffffffc7;
+  padding: 10px 0px 10px 0px;
+}
+.tline input {
+  background: #fff;
+  color: #5c5c5c;
+  width: 50%;
+  border: 0px none;
+  margin-left: -2px;
+  border-radius: 10px;
+  text-align: center;
+}
+#tform input::-webkit-outer-spin-button,
+#tform input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#tform input[type="number"] {
+  -moz-appearance: textfield;
+}
+

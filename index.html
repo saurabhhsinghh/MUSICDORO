@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="https://www.frontendhero.dev/wp-content/themes/feh-v1/favicon.png" type="image/x-icon">
+
+   
+   <title>MUSICDORO</title>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div id="background"></div>
+	
+	<div id="musicdoro">
+		
+	   <div id="screenplay">
+			<img src="round.gif" alt=""> 
+		</div>
+
+	   <span class="button" id="move"><i class="fa fa-cog"></i></span>
+
+	   <div id="timer">
+			<svg class="ctimer" viewBox="0 0 100 100">
+				<circle cx="50" cy="50" r="45" class="cbg"/>
+				<circle cx="50" cy="50" r="45" class="cpg"/>
+				<text id="tt" x="50" y="50" text-anchor="middle" dy=".3em" font-size="30">00:00</text>
+				<text id="tp" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">Paused</text>
+				<text id="tr" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">Rest</text>
+			</svg>
+		</div>
+
+	   <div id="sess">
+			<p id="comp">CONSISTENT POINT: </p>
+			<p id="compsess">0</p>
+		</div>
+
+
+
+
+
+
+
+		
+
+	   <div id="tfun">	
+			<div id="timbut">
+				<button id="pus"><i class="fa fa-pause"></i></button>
+				<button id="str"><i class="fa fa-play"></i></button>
+			</div>		
+		  <div id="tset">
+			   <span class="button" id="cset"><i class="fa fa-times"></i></span>
+
+			   <form id="tform">
+				  <p class="tline">
+					 <label for="work-duration">Pomodoro:</label>
+					 <input type="number" id="work-duration" value="25" min="1">
+				  </p>
+				  <p class="tline">
+					 <label for="rdur">Music:</label>
+					 <input type="number" id="rdur" value="5" min="1">
+				  </p>
+			   </form>
+			</div>
+		  	
+		</div>
+
+	</div>
+	
+    <script src="main.js"></script>
+</body>
+</html>
